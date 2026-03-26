@@ -1,16 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alex Ryder | CSE Portfolio</title>
-  <meta name="description" content="Computer Science Engineering student portfolio showcasing projects, research, skills, and achievements." />
+  <title>Rada Sai Mourya | CSE Portfolio</title>
+  <meta name="description"
+    content="Computer Science Engineering student portfolio showcasing projects, research, skills, and achievements." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .project-image {
+      position: relative;
+      overflow: hidden;
+      height: 180px;
+    }
+
+    .project-banner-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .project-card:hover .project-banner-img {
+      transform: scale(1.1);
+    }
+
+    .project-image i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      color: rgba(255, 255, 255, 0.4);
+      z-index: 1;
+      pointer-events: none;
+    }
+  </style>
 </head>
+
 <body>
 
   <!-- ===== CURSOR ===== -->
@@ -23,15 +57,17 @@
   <!-- ===== LOADING SCREEN ===== -->
   <div class="loader" id="loader">
     <div class="loader-inner">
-      <div class="loader-logo">&lt;AR/&gt;</div>
-      <div class="loader-bar"><div class="loader-progress" id="loaderProgress"></div></div>
+      <div class="loader-logo">&lt;RSM/&gt;</div>
+      <div class="loader-bar">
+        <div class="loader-progress" id="loaderProgress"></div>
+      </div>
       <div class="loader-text" id="loaderText">Initializing...</div>
     </div>
   </div>
 
   <!-- ===== NAV ===== -->
   <nav class="navbar" id="navbar">
-    <div class="nav-brand"><span class="brand-bracket">&lt;</span>AR<span class="brand-bracket">/&gt;</span></div>
+    <div class="nav-brand"><span class="brand-bracket">&lt;</span>RSM<span class="brand-bracket">/&gt;</span></div>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about" class="nav-link active" data-section="about">About</a></li>
       <li><a href="#resume" class="nav-link" data-section="resume">Resume</a></li>
@@ -75,11 +111,11 @@
       <div class="hero-left reveal">
         <div class="hero-badge"><i class="fas fa-circle pulse-dot"></i> Open to Opportunities</div>
         <h1 class="hero-title">
-          Hi, I'm <span class="gradient-text">Alex Ryder</span><br/>
+          Hi, I'm <span class="gradient-text">Rada Sai Mourya</span><br />
           <span class="typewriter" id="typewriter"></span>
         </h1>
         <p class="hero-description">
-          A passionate Computer Science & Engineering student at IIT Delhi, building intelligent systems, 
+          A passionate Computer Science & Engineering student at IIT Delhi, building intelligent systems,
           scalable applications, and real-world AI solutions. I turn coffee into code and ideas into impact.
         </p>
         <div class="hero-stats">
@@ -106,7 +142,8 @@
         <div class="hero-cta">
           <a href="#projects" class="btn btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
           <a href="#contact" class="btn btn-ghost">Let's Talk <i class="fas fa-paper-plane"></i></a>
-          <a href="#" class="btn btn-outline" id="downloadBtn"><i class="fas fa-download"></i> Resume</a>
+          <a href="assets/resume.pdf" download="Rada_Sai_Mourya_Resume.pdf" class="btn btn-outline" id="downloadBtn"><i
+              class="fas fa-download"></i> Resume</a>
         </div>
         <div class="hero-socials">
           <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -119,7 +156,8 @@
       <div class="hero-right reveal delay-2">
         <div class="avatar-ring">
           <div class="avatar-ring-inner">
-            <img src="profile.png" alt="Alex Ryder" class="avatar-img" id="avatarImg" onerror="this.style.display='none';document.getElementById('avatarFallback').style.display='flex'"/>
+            <img src="profile.png" alt="Rada Sai Mourya" class="avatar-img" id="avatarImg"
+              onerror="this.style.display='none';document.getElementById('avatarFallback').style.display='flex'" />
             <div class="avatar-fallback" id="avatarFallback">
               <i class="fas fa-user-graduate"></i>
             </div>
@@ -137,7 +175,7 @@
         <div class="code-snippet glass-card">
           <div class="code-dots"><span></span><span></span><span></span></div>
           <pre><code><span class="c-purple">class</span> <span class="c-yellow">Student</span>:
-  <span class="c-blue">name</span> = <span class="c-green">"Alex Ryder"</span>
+  <span class="c-blue">name</span> = <span class="c-green">"Rada Sai Mourya"</span>
   <span class="c-blue">role</span> = <span class="c-green">"CSE @ IIT Delhi"</span>
   <span class="c-blue">passion</span> = [<span class="c-green">"AI"</span>, <span class="c-green">"Web"</span>, <span class="c-green">"Research"</span>]
   
@@ -159,8 +197,17 @@
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">01 — Resume</span>
-        <h2 class="section-title">My <span class="gradient-text">Journey</span></h2>
-        <p class="section-subtitle">A snapshot of my professional experience and academic background</p>
+        <div
+          style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; flex-wrap: wrap; gap: 20px;">
+          <div>
+            <h2 class="section-title">My <span class="gradient-text">Journey</span></h2>
+            <p class="section-subtitle">A snapshot of my professional experience and academic background</p>
+          </div>
+          <a href="assets/resume.pdf" download="Rada_Sai_Mourya_Resume.pdf" class="btn btn-primary"
+            style="padding: 10px 20px; font-size: 0.9rem;">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+        </div>
       </div>
       <div class="resume-layout">
         <div class="resume-col reveal">
@@ -177,12 +224,14 @@
                   <span class="tl-date">Jun 2025 – Aug 2025</span>
                 </div>
                 <ul class="tl-list">
-                  <li>Developed transformer-based models for protein structure prediction, improving accuracy by 12%</li>
+                  <li>Developed transformer-based models for protein structure prediction, improving accuracy by 12%
+                  </li>
                   <li>Implemented distributed training pipelines on TPU v4 pods using JAX</li>
                   <li>Co-authored a paper accepted at NeurIPS 2025 workshop</li>
                 </ul>
                 <div class="tl-tags">
-                  <span class="tag">Python</span><span class="tag">JAX</span><span class="tag">ML</span><span class="tag">Research</span>
+                  <span class="tag">Python</span><span class="tag">JAX</span><span class="tag">ML</span><span
+                    class="tag">Research</span>
                 </div>
               </div>
             </div>
@@ -202,7 +251,8 @@
                   <li>Shipped 4 features to production serving 10K+ daily users</li>
                 </ul>
                 <div class="tl-tags">
-                  <span class="tag">React</span><span class="tag">.NET</span><span class="tag">Azure</span><span class="tag">SQL</span>
+                  <span class="tag">React</span><span class="tag">.NET</span><span class="tag">Azure</span><span
+                    class="tag">SQL</span>
                 </div>
               </div>
             </div>
@@ -229,47 +279,21 @@
         </div>
         <div class="resume-col reveal delay-2">
           <h3 class="resume-col-title"><i class="fas fa-trophy"></i> Achievements</h3>
-          <div class="achievements-grid">
+          <div class="achievements-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
             <div class="achievement-card glass-card">
-              <div class="ach-icon"><i class="fas fa-medal"></i></div>
+              <div class="ach-icon"><i class="fas fa-code"></i></div>
               <div class="ach-content">
-                <h4>ACM-ICPC Regionalist</h4>
-                <p>Ranked 34th among 2,400+ teams at ICPC Asia Pacific Regionals 2024</p>
+                <h4>DSA & Coding Excellence</h4>
+                <p>Solved 400+ Problems on LeetCode, HackerRank (5-Star Python), and GFG, mastering DSA fundamentals.
+                </p>
               </div>
             </div>
             <div class="achievement-card glass-card">
-              <div class="ach-icon"><i class="fas fa-award"></i></div>
+              <div class="ach-icon"><i class="fas fa-file-signature"></i></div>
               <div class="ach-content">
-                <h4>Google HashCode</h4>
-                <p>Top 5% globally, ranked 1st in India among student competitors</p>
-              </div>
-            </div>
-            <div class="achievement-card glass-card">
-              <div class="ach-icon"><i class="fas fa-star"></i></div>
-              <div class="ach-content">
-                <h4>Dean's Merit List</h4>
-                <p>All 6 semesters — top 2% of the CSE batch at IIT Delhi</p>
-              </div>
-            </div>
-            <div class="achievement-card glass-card">
-              <div class="ach-icon"><i class="fab fa-github"></i></div>
-              <div class="ach-content">
-                <h4>GitHub Arctic Vault</h4>
-                <p>2 open-source projects archived in GitHub's Arctic Code Vault 2024</p>
-              </div>
-            </div>
-            <div class="achievement-card glass-card">
-              <div class="ach-icon"><i class="fas fa-rocket"></i></div>
-              <div class="ach-content">
-                <h4>Smart India Hackathon</h4>
-                <p>National winner — AI-powered crop disease detection system (2024)</p>
-              </div>
-            </div>
-            <div class="achievement-card glass-card">
-              <div class="ach-icon"><i class="fas fa-graduation-cap"></i></div>
-              <div class="ach-content">
-                <h4>JEE Advanced AIR 342</h4>
-                <p>Secured All India Rank 342 out of 1.6 million candidates</p>
+                <h4>Patent Filed (AI)</h4>
+                <p>Filed patent for "Intelligent Wardrobe Management & Outfit Recommendation using AI" (App No:
+                  202511048551).</p>
               </div>
             </div>
           </div>
@@ -298,7 +322,9 @@
             <span class="edu-year">2022 – 2026</span>
             <div class="edu-cgpa">
               <span>CGPA</span>
-              <div class="cgpa-bar"><div class="cgpa-fill" data-width="92"></div></div>
+              <div class="cgpa-bar">
+                <div class="cgpa-fill" data-width="92"></div>
+              </div>
               <span class="cgpa-num">9.2 / 10</span>
             </div>
             <div class="edu-courses">
@@ -321,7 +347,9 @@
             <span class="edu-year">2020 – 2022</span>
             <div class="edu-cgpa">
               <span>Score</span>
-              <div class="cgpa-bar"><div class="cgpa-fill" data-width="97"></div></div>
+              <div class="cgpa-bar">
+                <div class="cgpa-fill" data-width="97"></div>
+              </div>
               <span class="cgpa-num">97.4%</span>
             </div>
             <div class="edu-courses">
@@ -340,7 +368,9 @@
             <span class="edu-year">2018 – 2020</span>
             <div class="edu-cgpa">
               <span>Score</span>
-              <div class="cgpa-bar"><div class="cgpa-fill" data-width="98"></div></div>
+              <div class="cgpa-bar">
+                <div class="cgpa-fill" data-width="98"></div>
+              </div>
               <span class="cgpa-num">98.6%</span>
             </div>
             <div class="edu-courses">
@@ -378,49 +408,65 @@
             <div class="skill-card glass-card reveal">
               <div class="skill-icon"><i class="fab fa-python"></i></div>
               <span class="skill-name">Python</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="95"></div>
+              </div>
               <span class="skill-level">Expert</span>
             </div>
             <div class="skill-card glass-card reveal delay-1">
               <div class="skill-icon cpp"><span>C++</span></div>
               <span class="skill-name">C/C++</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
               <span class="skill-level">Expert</span>
             </div>
             <div class="skill-card glass-card reveal delay-2">
               <div class="skill-icon js"><i class="fab fa-js-square"></i></div>
               <span class="skill-name">JavaScript</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="88"></div>
+              </div>
               <span class="skill-level">Advanced</span>
             </div>
             <div class="skill-card glass-card reveal delay-3">
               <div class="skill-icon java"><i class="fab fa-java"></i></div>
               <span class="skill-name">Java</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="82"></div>
+              </div>
               <span class="skill-level">Advanced</span>
             </div>
             <div class="skill-card glass-card reveal">
               <div class="skill-icon sql"><i class="fas fa-database"></i></div>
               <span class="skill-name">SQL</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
               <span class="skill-level">Advanced</span>
             </div>
             <div class="skill-card glass-card reveal delay-1">
               <div class="skill-icon go"><span>Go</span></div>
               <span class="skill-name">Go</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="70"></div>
+              </div>
               <span class="skill-level">Intermediate</span>
             </div>
             <div class="skill-card glass-card reveal delay-2">
               <div class="skill-icon rust"><span>Rs</span></div>
               <span class="skill-name">Rust</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="60"></div>
+              </div>
               <span class="skill-level">Beginner+</span>
             </div>
             <div class="skill-card glass-card reveal delay-3">
               <div class="skill-icon ts"><span>TS</span></div>
               <span class="skill-name">TypeScript</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
               <span class="skill-level">Advanced</span>
             </div>
           </div>
@@ -431,37 +477,49 @@
             <div class="skill-card glass-card reveal">
               <div class="skill-icon react-ic"><i class="fab fa-react"></i></div>
               <span class="skill-name">React</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
               <span class="skill-level">Expert</span>
             </div>
             <div class="skill-card glass-card reveal delay-1">
               <div class="skill-icon node"><i class="fab fa-node-js"></i></div>
               <span class="skill-name">Node.js</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
               <span class="skill-level">Advanced</span>
             </div>
             <div class="skill-card glass-card reveal delay-2">
               <div class="skill-icon tf"><span>TF</span></div>
               <span class="skill-name">TensorFlow</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="88"></div>
+              </div>
               <span class="skill-level">Advanced</span>
             </div>
             <div class="skill-card glass-card reveal delay-3">
               <div class="skill-icon torch"><i class="fas fa-fire"></i></div>
               <span class="skill-name">PyTorch</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
               <span class="skill-level">Advanced</span>
             </div>
             <div class="skill-card glass-card reveal">
               <div class="skill-icon flask"><i class="fas fa-flask"></i></div>
               <span class="skill-name">FastAPI</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="82"></div>
+              </div>
               <span class="skill-level">Advanced</span>
             </div>
             <div class="skill-card glass-card reveal delay-1">
               <div class="skill-icon next"><span>Nx</span></div>
               <span class="skill-name">Next.js</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="78"></div>
+              </div>
               <span class="skill-level">Intermediate</span>
             </div>
           </div>
@@ -472,37 +530,49 @@
             <div class="skill-card glass-card reveal">
               <div class="skill-icon docker-ic"><i class="fab fa-docker"></i></div>
               <span class="skill-name">Docker</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
               <span class="skill-level">Advanced</span>
             </div>
             <div class="skill-card glass-card reveal delay-1">
               <div class="skill-icon git-ic"><i class="fab fa-git-alt"></i></div>
               <span class="skill-name">Git</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="92"></div>
+              </div>
               <span class="skill-level">Expert</span>
             </div>
             <div class="skill-card glass-card reveal delay-2">
               <div class="skill-icon aws"><i class="fab fa-aws"></i></div>
               <span class="skill-name">AWS</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="75"></div>
+              </div>
               <span class="skill-level">Intermediate</span>
             </div>
             <div class="skill-card glass-card reveal delay-3">
               <div class="skill-icon k8s"><span>K8s</span></div>
               <span class="skill-name">Kubernetes</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="65"></div>
+              </div>
               <span class="skill-level">Intermediate</span>
             </div>
             <div class="skill-card glass-card reveal">
               <div class="skill-icon mongo"><i class="fas fa-leaf"></i></div>
               <span class="skill-name">MongoDB</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="83"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="83"></div>
+              </div>
               <span class="skill-level">Advanced</span>
             </div>
             <div class="skill-card glass-card reveal delay-1">
               <div class="skill-icon linux"><i class="fab fa-linux"></i></div>
               <span class="skill-name">Linux/Bash</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="87"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="87"></div>
+              </div>
               <span class="skill-level">Advanced</span>
             </div>
           </div>
@@ -512,12 +582,15 @@
           <div class="domain-bubbles">
             <div class="domain-bubble large reveal"><i class="fas fa-brain"></i><span>Machine Learning</span></div>
             <div class="domain-bubble large reveal delay-1"><i class="fas fa-globe"></i><span>Web Dev</span></div>
-            <div class="domain-bubble medium reveal delay-2"><i class="fas fa-eye"></i><span>Computer Vision</span></div>
+            <div class="domain-bubble medium reveal delay-2"><i class="fas fa-eye"></i><span>Computer Vision</span>
+            </div>
             <div class="domain-bubble medium reveal delay-3"><i class="fas fa-language"></i><span>NLP</span></div>
             <div class="domain-bubble medium reveal"><i class="fas fa-shield-alt"></i><span>Cybersecurity</span></div>
             <div class="domain-bubble small reveal delay-1"><i class="fas fa-microchip"></i><span>Embedded</span></div>
-            <div class="domain-bubble small reveal delay-2"><i class="fas fa-chart-line"></i><span>Data Science</span></div>
-            <div class="domain-bubble small reveal delay-3"><i class="fas fa-sitemap"></i><span>System Design</span></div>
+            <div class="domain-bubble small reveal delay-2"><i class="fas fa-chart-line"></i><span>Data Science</span>
+            </div>
+            <div class="domain-bubble small reveal delay-3"><i class="fas fa-sitemap"></i><span>System Design</span>
+            </div>
             <div class="domain-bubble medium reveal"><i class="fas fa-robot"></i><span>Robotics</span></div>
             <div class="domain-bubble small reveal delay-1"><i class="fas fa-cubes"></i><span>Blockchain</span></div>
           </div>
@@ -546,13 +619,19 @@
       <div class="projects-grid" id="projectsGrid">
 
         <div class="project-card glass-card reveal" data-category="ai" data-index="0">
-          <div class="project-image"><div class="project-img-placeholder ai-grad"><i class="fas fa-brain"></i></div></div>
+          <div class="project-image">
+            <img src="assets/projects/pulsenet.png" alt="NeuralCrop" class="project-banner-img" />
+            <i class="fas fa-brain"></i>
+          </div>
           <div class="project-body">
-            <div class="project-meta"><span class="project-cat ai">AI/ML</span><span class="project-star"><i class="fas fa-star"></i> Featured</span></div>
+            <div class="project-meta"><span class="project-cat ai">AI/ML</span><span class="project-star"><i
+                  class="fas fa-star"></i> Featured</span></div>
             <h3>NeuralCrop — AI Crop Disease Detector</h3>
-            <p>Real-time plant disease detection using CNN + Vision Transformers. Deployed on edge devices with 94.7% accuracy across 50 disease classes. Winner of SIH 2024.</p>
+            <p>Real-time plant disease detection using CNN + Vision Transformers. Deployed on edge devices with 94.7%
+              accuracy across 50 disease classes. Winner of SIH 2024.</p>
             <div class="project-tech">
-              <span class="tag">PyTorch</span><span class="tag">OpenCV</span><span class="tag">FastAPI</span><span class="tag">React Native</span>
+              <span class="tag">PyTorch</span><span class="tag">OpenCV</span><span class="tag">FastAPI</span><span
+                class="tag">React Native</span>
             </div>
             <div class="project-links">
               <a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a>
@@ -562,13 +641,18 @@
         </div>
 
         <div class="project-card glass-card reveal delay-1" data-category="web" data-index="1">
-          <div class="project-image"><div class="project-img-placeholder web-grad"><i class="fas fa-cubes"></i></div></div>
+          <div class="project-image">
+            <img src="assets/projects/concert-guide.png" alt="BlockVote" class="project-banner-img" />
+            <i class="fas fa-cubes"></i>
+          </div>
           <div class="project-body">
             <div class="project-meta"><span class="project-cat web">Web</span></div>
             <h3>BlockVote — Decentralized Voting System</h3>
-            <p>A tamper-proof e-voting platform using Ethereum smart contracts, IPFS for media storage, and MetaMask for auth. 1,200+ votes cast in a college pilot.</p>
+            <p>A tamper-proof e-voting platform using Ethereum smart contracts, IPFS for media storage, and MetaMask for
+              auth. 1,200+ votes cast in a college pilot.</p>
             <div class="project-tech">
-              <span class="tag">Solidity</span><span class="tag">React</span><span class="tag">Hardhat</span><span class="tag">IPFS</span>
+              <span class="tag">Solidity</span><span class="tag">React</span><span class="tag">Hardhat</span><span
+                class="tag">IPFS</span>
             </div>
             <div class="project-links">
               <a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a>
@@ -578,13 +662,18 @@
         </div>
 
         <div class="project-card glass-card reveal delay-2" data-category="ai" data-index="2">
-          <div class="project-image"><div class="project-img-placeholder ai-grad2"><i class="fas fa-microphone-alt"></i></div></div>
+          <div class="project-image">
+            <img src="assets/projects/carbon-tracker.png" alt="SpeakEasy" class="project-banner-img" />
+            <i class="fas fa-microphone-alt"></i>
+          </div>
           <div class="project-body">
             <div class="project-meta"><span class="project-cat ai">AI/ML</span></div>
             <h3>SpeakEasy — Real-time Speech Translator</h3>
-            <p>End-to-end speech translation system supporting 18 languages using Whisper + mBART50. &lt;800ms latency with WebSocket streaming.</p>
+            <p>End-to-end speech translation system supporting 18 languages using Whisper + mBART50. &lt;800ms latency
+              with WebSocket streaming.</p>
             <div class="project-tech">
-              <span class="tag">Whisper</span><span class="tag">HuggingFace</span><span class="tag">WebSocket</span><span class="tag">Python</span>
+              <span class="tag">Whisper</span><span class="tag">HuggingFace</span><span
+                class="tag">WebSocket</span><span class="tag">Python</span>
             </div>
             <div class="project-links">
               <a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a>
@@ -593,54 +682,29 @@
           </div>
         </div>
 
-        <div class="project-card glass-card reveal" data-category="systems" data-index="3">
-          <div class="project-image"><div class="project-img-placeholder sys-grad"><i class="fas fa-server"></i></div></div>
-          <div class="project-body">
-            <div class="project-meta"><span class="project-cat systems">Systems</span></div>
-            <h3>MiniOS — Custom Unix-like Kernel</h3>
-            <p>A minimal operating system kernel written in C & x86 Assembly. Implements virtual memory, process scheduling, file system, and a shell.</p>
-            <div class="project-tech">
-              <span class="tag">C</span><span class="tag">x86 ASM</span><span class="tag">QEMU</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a>
-            </div>
+        <div class="project-card glass-card reveal" data-category="web" data-index="3">
+          <div class="project-image">
+            <img src="assets/projects/shore-sip.png" alt="Shore & Sip" class="project-banner-img" />
+            <i class="fas fa-coffee"></i>
           </div>
-        </div>
-
-        <div class="project-card glass-card reveal delay-1" data-category="research" data-index="4">
-          <div class="project-image"><div class="project-img-placeholder res-grad"><i class="fas fa-dna"></i></div></div>
-          <div class="project-body">
-            <div class="project-meta"><span class="project-cat research">Research</span><span class="project-star"><i class="fas fa-star"></i> Published</span></div>
-            <h3>ProteinFold-Lite — Efficient Protein Structure Prediction</h3>
-            <p>Lightweight variant of AlphaFold using distillation + pruning achieving 89% accuracy at 6x speed. Published at NeurIPS'25 workshop.</p>
-            <div class="project-tech">
-              <span class="tag">JAX</span><span class="tag">TPU</span><span class="tag">BioPython</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="proj-link"><i class="fas fa-file-alt"></i> Paper</a>
-              <a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card glass-card reveal delay-2" data-category="web" data-index="5">
-          <div class="project-image"><div class="project-img-placeholder web-grad2"><i class="fas fa-stream"></i></div></div>
           <div class="project-body">
             <div class="project-meta"><span class="project-cat web">Web</span></div>
-            <h3>PulseNet — Real-time Emergency Coordinator</h3>
-            <p>Emergency coordination platform with live location tracking, Socket.IO alerts, admin command center, and Razorpay payment integration.</p>
+            <h3>Shore & Sip — Premium Coastal Cafe Site</h3>
+            <p>A sophisticated, high-end cafe website featuring a minimalist glassmorphism UI, interactive menu, and
+              real-time table booking system.</p>
             <div class="project-tech">
-              <span class="tag">MERN</span><span class="tag">Socket.IO</span><span class="tag">Razorpay</span><span class="tag">Leaflet.js</span>
+              <span class="tag">React</span><span class="tag">Framer Motion</span><span class="tag">Tailwind</span><span
+                class="tag">Node.js</span>
             </div>
             <div class="project-links">
               <a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a>
-              <a href="#" class="proj-link primary"><i class="fas fa-external-link-alt"></i> Live</a>
+              <a href="#" class="proj-link primary"><i class="fas fa-external-link-alt"></i> Demo</a>
             </div>
           </div>
         </div>
-
       </div>
+
+    </div>
     </div>
   </section>
 
@@ -655,35 +719,34 @@
         <p class="section-subtitle">Industry recognized qualifications and course completions</p>
       </div>
       <div class="cert-grid">
-
         <div class="cert-card glass-card reveal" data-modal="cert1">
           <div class="cert-ribbon"><i class="fas fa-award"></i></div>
-          <div class="cert-logo gcp"><i class="fas fa-cloud"></i></div>
+          <div class="cert-logo nptel"><i class="fas fa-university"></i></div>
           <div class="cert-info">
-            <h4>Professional Machine Learning Engineer</h4>
-            <span class="cert-issuer">Google Cloud</span>
-            <span class="cert-date"><i class="fas fa-calendar-alt"></i> Jan 2025</span>
+            <h4>Privacy and Security in Online Social Media</h4>
+            <span class="cert-issuer">NPTEL — IIT Hyderabad</span>
+            <span class="cert-date"><i class="fas fa-calendar-alt"></i> Apr 2025</span>
           </div>
           <div class="cert-overlay"><span>View Certificate</span></div>
         </div>
 
         <div class="cert-card glass-card reveal delay-1" data-modal="cert2">
           <div class="cert-ribbon"><i class="fas fa-award"></i></div>
-          <div class="cert-logo aws-logo"><i class="fab fa-aws"></i></div>
+          <div class="cert-logo csepath"><i class="fab fa-python"></i></div>
           <div class="cert-info">
-            <h4>AWS Solutions Architect Associate</h4>
-            <span class="cert-issuer">Amazon Web Services</span>
-            <span class="cert-date"><i class="fas fa-calendar-alt"></i> Sep 2024</span>
+            <h4>Unrevealing Basic Python towards AI/ML</h4>
+            <span class="cert-issuer">CSEPathshala</span>
+            <span class="cert-date"><i class="fas fa-calendar-alt"></i> Apr 2024</span>
           </div>
           <div class="cert-overlay"><span>View Certificate</span></div>
         </div>
 
         <div class="cert-card glass-card reveal delay-2" data-modal="cert3">
           <div class="cert-ribbon"><i class="fas fa-award"></i></div>
-          <div class="cert-logo microsoft"><i class="fab fa-microsoft"></i></div>
+          <div class="cert-logo cipher"><i class="fas fa-code"></i></div>
           <div class="cert-info">
-            <h4>Azure Data Scientist Associate (DP-100)</h4>
-            <span class="cert-issuer">Microsoft</span>
+            <h4>Data Structures and Algorithms using C++</h4>
+            <span class="cert-issuer">CipherSchools</span>
             <span class="cert-date"><i class="fas fa-calendar-alt"></i> Mar 2024</span>
           </div>
           <div class="cert-overlay"><span>View Certificate</span></div>
@@ -691,37 +754,14 @@
 
         <div class="cert-card glass-card reveal delay-3" data-modal="cert4">
           <div class="cert-ribbon"><i class="fas fa-award"></i></div>
-          <div class="cert-logo meta-logo"><i class="fab fa-meta"></i></div>
+          <div class="cert-logo fcc"><i class="fab fa-free-code-camp"></i></div>
           <div class="cert-info">
-            <h4>Meta Front-End Developer Professional</h4>
-            <span class="cert-issuer">Meta / Coursera</span>
+            <h4>Responsive Web Design</h4>
+            <span class="cert-issuer">freeCodeCamp</span>
             <span class="cert-date"><i class="fas fa-calendar-alt"></i> Nov 2023</span>
           </div>
           <div class="cert-overlay"><span>View Certificate</span></div>
         </div>
-
-        <div class="cert-card glass-card reveal" data-modal="cert5">
-          <div class="cert-ribbon"><i class="fas fa-award"></i></div>
-          <div class="cert-logo deeplearn"><i class="fas fa-brain"></i></div>
-          <div class="cert-info">
-            <h4>Deep Learning Specialization (5 Courses)</h4>
-            <span class="cert-issuer">DeepLearning.AI / Coursera</span>
-            <span class="cert-date"><i class="fas fa-calendar-alt"></i> Aug 2023</span>
-          </div>
-          <div class="cert-overlay"><span>View Certificate</span></div>
-        </div>
-
-        <div class="cert-card glass-card reveal delay-1" data-modal="cert6">
-          <div class="cert-ribbon"><i class="fas fa-award"></i></div>
-          <div class="cert-logo cisco"><i class="fas fa-network-wired"></i></div>
-          <div class="cert-info">
-            <h4>CCNA — Cisco Certified Network Associate</h4>
-            <span class="cert-issuer">Cisco</span>
-            <span class="cert-date"><i class="fas fa-calendar-alt"></i> May 2023</span>
-          </div>
-          <div class="cert-overlay"><span>View Certificate</span></div>
-        </div>
-
       </div>
 
       <!-- Certificate Modal -->
@@ -761,9 +801,14 @@
               <span class="paper-venue neurips">NeurIPS 2025</span>
               <span class="paper-type">Workshop Paper</span>
             </div>
-            <h3 class="paper-title">ProteinFold-Lite: Knowledge Distillation for Efficient Protein Structure Prediction</h3>
-            <p class="paper-authors"><i class="fas fa-users"></i> <strong>Alex Ryder</strong>, Priya Sharma, Dr. Raj Menon, et al.</p>
-            <p class="paper-abstract">We propose a lightweight framework for protein structure prediction that achieves 89% of AlphaFold2's accuracy using only 16% of its parameters through structured pruning and knowledge distillation, enabling inference on consumer hardware.</p>
+            <h3 class="paper-title">ProteinFold-Lite: Knowledge Distillation for Efficient Protein Structure Prediction
+            </h3>
+            <p class="paper-authors"><i class="fas fa-users"></i> <strong>Rada Sai Mourya</strong>, Priya Sharma, Dr.
+              Raj
+              Menon, et al.</p>
+            <p class="paper-abstract">We propose a lightweight framework for protein structure prediction that achieves
+              89% of AlphaFold2's accuracy using only 16% of its parameters through structured pruning and knowledge
+              distillation, enabling inference on consumer hardware.</p>
             <div class="paper-stats">
               <span><i class="fas fa-quote-right"></i> 12 citations</span>
               <span><i class="fas fa-eye"></i> 1.4K views</span>
@@ -785,8 +830,10 @@
               <span class="paper-type">Long Paper</span>
             </div>
             <h3 class="paper-title">Cross-Lingual Code-Switching in Low-Resource NLP: A Transformer Approach</h3>
-            <p class="paper-authors"><i class="fas fa-users"></i> <strong>Alex Ryder</strong>, Dr. Meera Kapoor</p>
-            <p class="paper-abstract">This paper addresses code-switching in 8 low-resource Indian languages using a novel multilingual adapter architecture built on mBERT. We achieve state-of-the-art results on 5 benchmarks.</p>
+            <p class="paper-authors"><i class="fas fa-users"></i> <strong>Rada Sai Mourya</strong>, Dr. Meera Kapoor</p>
+            <p class="paper-abstract">This paper addresses code-switching in 8 low-resource Indian languages using a
+              novel multilingual adapter architecture built on mBERT. We achieve state-of-the-art results on 5
+              benchmarks.</p>
             <div class="paper-stats">
               <span><i class="fas fa-quote-right"></i> 7 citations</span>
               <span><i class="fas fa-eye"></i> 870 views</span>
@@ -808,8 +855,12 @@
               <span class="paper-type">Under Review — CVPR 2026</span>
             </div>
             <h3 class="paper-title">AgroVision: Multi-Modal Fusion for Precision Agriculture Using UAV Imagery</h3>
-            <p class="paper-authors"><i class="fas fa-users"></i> <strong>Alex Ryder</strong>, Ananya Singh, Dr. Vikram Nair</p>
-            <p class="paper-abstract">We present a multi-modal deep learning system that fuses RGB, NIR, and thermal UAV imagery for real-time crop health monitoring, outperforming existing baselines by 8.3% mIoU on the FieldSAT benchmark.</p>
+            <p class="paper-authors"><i class="fas fa-users"></i> <strong>Rada Sai Mourya</strong>, Ananya Singh, Dr.
+              Vikram
+              Nair</p>
+            <p class="paper-abstract">We present a multi-modal deep learning system that fuses RGB, NIR, and thermal UAV
+              imagery for real-time crop health monitoring, outperforming existing baselines by 8.3% mIoU on the
+              FieldSAT benchmark.</p>
             <div class="paper-stats">
               <span><i class="fas fa-quote-right"></i> Under Review</span>
               <span><i class="fas fa-eye"></i> 345 views</span>
@@ -840,7 +891,8 @@
       <div class="contact-layout">
         <div class="contact-info reveal">
           <div class="contact-intro">
-            <p>I'm always open to exciting opportunities, research collaborations, internships, or coffee chats about AI. Drop me a message, and I'll get back to you within 24 hours!</p>
+            <p>I'm always open to exciting opportunities, research collaborations, internships, or coffee chats about
+              AI. Drop me a message, and I'll get back to you within 24 hours!</p>
           </div>
           <div class="contact-items">
             <div class="contact-item glass-card">
@@ -885,7 +937,7 @@
               <label for="nameInput">Your Name</label>
               <div class="input-wrap">
                 <i class="fas fa-user"></i>
-                <input type="text" id="nameInput" placeholder="John Doe" required autocomplete="name"/>
+                <input type="text" id="nameInput" placeholder="John Doe" required autocomplete="name" />
               </div>
               <span class="field-error" id="nameError">Please enter your name</span>
             </div>
@@ -893,7 +945,7 @@
               <label for="emailInput">Email Address</label>
               <div class="input-wrap">
                 <i class="fas fa-envelope"></i>
-                <input type="email" id="emailInput" placeholder="john@example.com" required autocomplete="email"/>
+                <input type="email" id="emailInput" placeholder="john@example.com" required autocomplete="email" />
               </div>
               <span class="field-error" id="emailError">Please enter a valid email</span>
             </div>
@@ -901,7 +953,7 @@
               <label for="subjectInput">Subject</label>
               <div class="input-wrap">
                 <i class="fas fa-tag"></i>
-                <input type="text" id="subjectInput" placeholder="Internship Opportunity" required/>
+                <input type="text" id="subjectInput" placeholder="Internship Opportunity" required />
               </div>
             </div>
             <div class="form-group">
@@ -928,9 +980,9 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-brand">&lt;AR/&gt;</div>
-      <p>Designed & Built by <strong>Alex Ryder</strong> with ❤️ and lots of ☕</p>
-      <p class="footer-copy">© 2026 Alex Ryder. All rights reserved.</p>
+      <div class="footer-brand">&lt;RSM/&gt;</div>
+      <p>Designed & Built by <strong>Rada Sai Mourya</strong> with ❤️ and lots of ☕</p>
+      <p class="footer-copy">© 2026 Rada Sai Mourya. All rights reserved.</p>
       <div class="footer-links">
         <a href="#about">About</a><span>·</span>
         <a href="#projects">Projects</a><span>·</span>
@@ -947,4 +999,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,37 +1,27 @@
 import { useState } from 'react';
-import { FaGoogleDrive, FaAws, FaMicrosoft, FaMeta, FaBrain, FaNetworkWired } from 'react-icons/fa6';
+import { FaPython, FaCode, FaLaptopCode, FaBuildingColumns as FaUniversity } from 'react-icons/fa6';
 import { FiAward, FiCalendar, FiExternalLink, FiX } from 'react-icons/fi';
 
 const certs = [
     {
-        id: 'gcp', LogoIcon: FaGoogleDrive, logoCls: 'gcp',
-        title: 'Professional Machine Learning Engineer',
-        issuer: 'Google Cloud', date: 'Jan 2025',
+        id: 'nptel', LogoIcon: FaUniversity, logoCls: 'nptel',
+        title: 'Privacy and Security in Online Social Media',
+        issuer: 'NPTEL — IIT Hyderabad', date: 'Apr 2025',
     },
     {
-        id: 'aws', LogoIcon: FaAws, logoCls: 'aws',
-        title: 'AWS Solutions Architect Associate',
-        issuer: 'Amazon Web Services', date: 'Sep 2024',
+        id: 'csepath', LogoIcon: FaPython, logoCls: 'csepath',
+        title: 'Unrevealing Basic Python towards AI/ML',
+        issuer: 'CSEPathshala', date: 'Apr 2024',
     },
     {
-        id: 'ms', LogoIcon: FaMicrosoft, logoCls: 'ms',
-        title: 'Azure Data Scientist Associate (DP-100)',
-        issuer: 'Microsoft', date: 'Mar 2024',
+        id: 'cipher', LogoIcon: FaCode, logoCls: 'cipher',
+        title: 'Data Structures and Algorithms using C++',
+        issuer: 'CipherSchools', date: 'Mar 2024',
     },
     {
-        id: 'meta', LogoIcon: FaMeta, logoCls: 'meta',
-        title: 'Meta Front-End Developer Professional',
-        issuer: 'Meta / Coursera', date: 'Nov 2023',
-    },
-    {
-        id: 'dl', LogoIcon: FaBrain, logoCls: 'dl',
-        title: 'Deep Learning Specialization (5 Courses)',
-        issuer: 'DeepLearning.AI / Coursera', date: 'Aug 2023',
-    },
-    {
-        id: 'cisco', LogoIcon: FaNetworkWired, logoCls: 'cisco',
-        title: 'CCNA — Cisco Certified Network Associate',
-        issuer: 'Cisco', date: 'May 2023',
+        id: 'fcc', LogoIcon: FaLaptopCode, logoCls: 'fcc',
+        title: 'Responsive Web Design',
+        issuer: 'freeCodeCamp', date: 'Nov 2023',
     },
 ];
 

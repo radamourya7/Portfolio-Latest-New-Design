@@ -31,7 +31,7 @@ export default function Navbar() {
         <>
             <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
                 <a className="nav-brand" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                    &lt;SM/&gt;
+                    &lt;RSM/&gt;
                 </a>
                 <ul className="nav-links">
                     {links.map(id => (

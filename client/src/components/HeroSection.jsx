@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiCode, FiArrowRight, FiDownload } from 'react-icons/fi';
 import { SiLeetcode } from 'react-icons/si';
+import profileImg from '../assets/profile.png';
 
 const roles = [
     'Full-Stack Developer', 2000,
@@ -84,7 +85,7 @@ export default function HeroSection() {
                         <a href="#contact" className="btn btn-ghost" onClick={e => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
                             Let's Talk
                         </a>
-                        <a href="#" className="btn btn-outline">
+                        <a href="/resume.pdf" download="Rada_Sai_Mourya_Resume.pdf" className="btn btn-outline">
                             <FiDownload /> Resume
                         </a>
                     </div>
@@ -105,7 +106,7 @@ export default function HeroSection() {
                     <div className="avatar-wrap">
                         <div className="avatar-ring" />
                         <div className="avatar-circle">
-                            <span>🎓</span>
+                            <img src={profileImg} alt="Rada Sai Mourya" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
                         </div>
                         <div className="orbit-item orbit-1">🐍</div>
                         <div className="orbit-item orbit-2">🧠</div>

@@ -1,10 +1,18 @@
 import { useState } from 'react';
 import { FiGithub, FiExternalLink, FiFileText } from 'react-icons/fi';
 
+// Project Images
+import pulsenetImg from '../assets/projects/pulsenet.png';
+import concertImg from '../assets/projects/concert-guide.png';
+import carbonImg from '../assets/projects/carbon-tracker.png';
+import shoreSipImg from '../assets/projects/shore-sip.png';
+import proteinImg from '../assets/projects/proteinfold.png';
+
 const ALL_PROJECTS = [
     {
         id: 0, category: 'ai',
         icon: '🧠', bannerCls: 'b-ai',
+        image: pulsenetImg,
         cat: 'MERN Stack', catCls: 'cat-ai',
         featured: true,
         title: 'PulseNet – Real-Time Emergency Coordination Platform',
@@ -15,48 +23,32 @@ const ALL_PROJECTS = [
     {
         id: 1, category: 'web',
         icon: '⛓️', bannerCls: 'b-web',
+        image: concertImg,
         cat: 'Web', catCls: 'cat-web',
         title: 'AI Virtual Concert Guide',
-        desc: 'AI Virtual Concert Guide is a web application that uses AI to provide personalized recommendations for concerts based on user preferences and location. The application uses a combination of AI and machine learning to provide personalized recommendations for concerts based on user preferences and location.',
+        desc: 'AI Virtual Concert Guide is a web application that uses AI to provide personalized recommendations for concerts based on user preferences and location.',
         tags: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js', 'React.js', 'Socket.io', 'WebSockets'],
         links: [{ label: 'Code', icon: <FiGithub />, href: '#' }, { label: 'Demo', icon: <FiExternalLink />, href: '#', primary: true }],
     },
     {
         id: 2, category: 'ai',
         icon: '🎙️', bannerCls: 'b-ai2',
+        image: carbonImg,
         cat: 'AI/ML', catCls: 'cat-ai',
         title: 'Carbon Footprint Tracker',
-        desc: 'Carbon Footprint Tracker is a web application that uses AI to provide personalized recommendations for concerts based on user preferences and location. The application uses a combination of AI and machine learning to provide personalized recommendations for concerts based on user preferences and location.',
+        desc: 'A comprehensive carbon footprint tracker using AI to analyze consumption patterns and provide personalized recommendations for sustainability.',
         tags: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js', 'React.js', 'Socket.io', 'WebSockets'],
         links: [{ label: 'Code', icon: <FiGithub />, href: '#' }, { label: 'Demo', icon: <FiExternalLink />, href: '#', primary: true }],
     },
     {
-        id: 3, category: 'systems',
-        icon: '💻', bannerCls: 'b-sys',
-        cat: 'Systems', catCls: 'cat-sys',
-        title: 'MiniOS — Custom Unix-like Kernel',
-        desc: 'Minimal OS kernel in C & x86 Assembly. Implements virtual memory, process scheduling, file system, and interactive shell.',
-        tags: ['C', 'x86 ASM', 'QEMU'],
-        links: [{ label: 'Code', icon: <FiGithub />, href: '#' }],
-    },
-    {
-        id: 4, category: 'research',
-        icon: '🧬', bannerCls: 'b-res',
-        cat: 'Research', catCls: 'cat-res',
-        featured: true,
-        title: 'ProteinFold-Lite — Efficient Protein Prediction',
-        desc: 'Lightweight AlphaFold variant using distillation + pruning achieving 89% accuracy at 6× speed. Published at NeurIPS\'25 workshop.',
-        tags: ['JAX', 'TPU', 'BioPython'],
-        links: [{ label: 'Paper', icon: <FiFileText />, href: '#' }, { label: 'Code', icon: <FiGithub />, href: '#' }],
-    },
-    {
-        id: 5, category: 'web',
-        icon: '🚨', bannerCls: 'b-web2',
+        id: 3, category: 'web',
+        icon: '☕', bannerCls: 'b-web',
+        image: shoreSipImg,
         cat: 'Web', catCls: 'cat-web',
-        title: 'PulseNet — Real-time Emergency Coordinator',
-        desc: 'Emergency coordination platform with live location tracking, Socket.IO alerts, admin command center, and Razorpay integration.',
-        tags: ['MERN', 'Socket.IO', 'Razorpay', 'Leaflet.js'],
-        links: [{ label: 'Code', icon: <FiGithub />, href: '#' }, { label: 'Live', icon: <FiExternalLink />, href: '#', primary: true }],
+        title: 'Shore & Sip — Premium Coastal Cafe Site',
+        desc: 'A sophisticated, high-end cafe website featuring a minimalist glassmorphism UI, interactive menu, and real-time table booking system.',
+        tags: ['React', 'Framer Motion', 'Tailwind CSS', 'Node.js'],
+        links: [{ label: 'Code', icon: <FiGithub />, href: '#' }, { label: 'Demo', icon: <FiExternalLink />, href: '#', primary: true }],
     },
 ];
 
@@ -86,7 +78,11 @@ export default function ProjectsSection() {
                     {filtered.map((p, i) => (
                         <div className={`project-card glass-card reveal d${Math.min(i % 3 + 1, 4)}`} key={p.id}>
                             <div className={`project-banner ${p.bannerCls}`}>
-                                <span style={{ fontSize: '3.5rem' }}>{p.icon}</span>
+                                {p.image ? (
+                                    <img src={p.image} alt={p.title} className="project-banner-img" />
+                                ) : (
+                                    <span style={{ fontSize: '3.5rem' }}>{p.icon}</span>
+                                )}
                             </div>
                             <div className="project-body">
                                 <div className="proj-meta">

@@ -40,7 +40,7 @@ export default function ResearchSection() {
                             <p className="paper-authors">
                                 <FiUsers style={{ marginRight: 6 }} />
                                 {p.authors.map((a, j) => (
-                                    <span key={j} style={a === 'Alex Ryder' ? { fontWeight: 700, color: 'var(--text)' } : {}}>
+                                    <span key={j} style={a === 'Rada Sai Mourya' ? { fontWeight: 700, color: 'var(--text)' } : {}}>
                                         {a}{j < p.authors.length - 1 ? ', ' : ''}
                                     </span>
                                 ))}

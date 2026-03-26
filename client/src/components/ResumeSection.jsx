@@ -1,4 +1,4 @@
-import { FiBookOpen, FiAward } from 'react-icons/fi';
+import { FiBookOpen, FiAward, FiDownload } from 'react-icons/fi';
 
 const training = [
     {
@@ -14,12 +14,16 @@ const training = [
 ];
 
 const achievements = [
-    { icon: '🥇', title: 'ACM-ICPC Regionalist', desc: 'Ranked 34th among 2,400+ teams at ICPC Asia Pacific Regionals 2024' },
-    { icon: '🏆', title: 'Google HashCode', desc: 'Top 5% globally, ranked 1st in India among student competitors' },
-    { icon: '⭐', title: "Dean's Merit List", desc: 'All 6 semesters — top 2% of the CSE batch at IIT Delhi' },
-    { icon: '🐙', title: 'GitHub Arctic Vault', desc: '2 open-source projects archived in GitHub Arctic Code Vault 2024' },
-    { icon: '🚀', title: 'Smart India Hackathon', desc: 'National winner — AI-powered crop disease detection system (2024)' },
-    { icon: '📚', title: 'JEE Advanced AIR 342', desc: 'Secured All India Rank 342 out of 1.6 million candidates' },
+    {
+        icon: '💻',
+        title: 'DSA & Coding Excellence',
+        desc: 'Solved 400+ Problems on LeetCode, HackerRank (5-Star Python), and GFG, mastering DSA fundamentals.'
+    },
+    {
+        icon: '📜',
+        title: 'Patent Filed (AI)',
+        desc: 'Filed patent for "Intelligent Wardrobe Management & Outfit Recommendation using AI" (App No: 202511048551).'
+    },
 ];
 
 export default function ResumeSection() {
@@ -28,8 +32,15 @@ export default function ResumeSection() {
             <div className="container">
                 <div className="section-header reveal">
                     <span className="section-tag">01 — Resume</span>
-                    <h2 className="section-title">My <span className="gradient-text">Journey</span></h2>
-                    <p className="section-subtitle">A snapshot of my professional experience and academic background</p>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
+                        <div>
+                            <h2 className="section-title">My <span className="gradient-text">Journey</span></h2>
+                            <p className="section-subtitle">A snapshot of my professional experience and academic background</p>
+                        </div>
+                        <a href="/resume.pdf" download="Rada_Sai_Mourya_Resume.pdf" className="btn btn-primary" style={{ padding: '0.6rem 1.2rem', fontSize: '0.9rem' }}>
+                            <FiDownload style={{ marginRight: '8px' }} /> Download CV
+                        </a>
+                    </div>
                 </div>
                 <div className="resume-layout">
                     {/* Training */}
